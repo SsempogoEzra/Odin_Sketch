@@ -1,0 +1,16 @@
+#ArtBoard{
+    border: 2px solid red;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    height: 20em;
+    width: 20em;
+}
+
+.pixel{
+    background:blue;
+    border:0.5px solid white;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
