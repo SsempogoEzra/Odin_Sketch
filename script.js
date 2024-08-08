@@ -1,7 +1,8 @@
 const ArtBoard = document.getElementById('ArtBoard');
+const pixels = document.getElementsByClassName('pixel');
 
 
-function PixelGrid(Num){
+function PixelGrid(Num = 16){
     for(let i=1;i<(Num*Num);i++){
         const div = document.createElement('div');
         div.style.width=`calc(100%/${Num})`;
@@ -10,5 +11,12 @@ function PixelGrid(Num){
         ArtBoard.appendChild(div);
     };
 };
-PixelGrid(16);
+PixelGrid();
+
+
+for(let i = 0; i < pixels.length; i++){
+    pixels[i].addEventListener('mouseover',() => {
+        pixels[i].style.backgroundColor = 'red';
+    });
+}
 
