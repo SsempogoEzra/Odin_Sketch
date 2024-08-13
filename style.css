@@ -1,5 +1,6 @@
 body{
     font-family: 'Franklin';
+    
 }
 
 #ArtBoard{
@@ -13,7 +14,7 @@ body{
 
 .pixel{
     background:blue;
-    border:0.5px solid white;
+    /* border:0.1px solid white; */
     margin:0;
     padding:0;
     box-sizing: border-box;
