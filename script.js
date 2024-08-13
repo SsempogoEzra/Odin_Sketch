@@ -1,5 +1,6 @@
 const ArtBoard = document.getElementById('ArtBoard');
 const pixels = document.getElementsByClassName('pixel');
+const ResolutionBtn = document.getElementById('Resolution');  
 
 
 function PixelGrid(Num = 16){
