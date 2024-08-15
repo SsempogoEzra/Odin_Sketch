@@ -1,7 +1,9 @@
+const Colors=['red','green','yellow','pink','cyan','magenta',]; //colors to be used in the program.
 const ArtBoard = document.getElementById('ArtBoard');
 const pixels = document.getElementsByClassName('pixel');
 const ResolutionBtn = document.getElementById('ResolutionBtn');  
 const ResetBtn = document.getElementById('ResetBtn');
+const RandomBtn = document.getElementById('RandomBtn');
 
 
 function PixelGrid(Num=16){
@@ -24,6 +26,16 @@ function ResetGrid(){
     PixelGrid();
 }
 
+function RandomColor(){
+    for(let i = 0; i < pixels.length; i++){
+        const RandomColor=Colors[Math.floor(Math.random()*6)];
+        pixels[i].addEventListener('mouseover',() => {
+            pixels[i].style.backgroundColor =RandomColor;
+        });
+    };
+};
+
+
 PixelGrid();
 
 ResolutionBtn.addEventListener('click',() =>{
@@ -45,4 +57,5 @@ ResolutionBtn.addEventListener('click',() =>{
 });
 
 ResetBtn.addEventListener('click',ResetGrid);
+RandomBtn.addEventListener('click',RandomColor);
 
