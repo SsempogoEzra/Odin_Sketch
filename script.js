@@ -1,6 +1,7 @@
 const ArtBoard = document.getElementById('ArtBoard');
 const pixels = document.getElementsByClassName('pixel');
 const ResolutionBtn = document.getElementById('ResolutionBtn');  
+const ResetBtn = document.getElementById('ResetBtn');
 
 
 function PixelGrid(Num=16){
@@ -17,6 +18,12 @@ function PixelGrid(Num=16){
         });
     }
 };
+
+function ResetGrid(){
+    ArtBoard.innerHTML= "";
+    PixelGrid();
+}
+
 PixelGrid();
 
 ResolutionBtn.addEventListener('click',() =>{
@@ -37,10 +44,5 @@ ResolutionBtn.addEventListener('click',() =>{
     PixelGrid(PixelDensity);
 });
 
-
-// for(let i = 0; i < pixels.length; i++){
-//     pixels[i].addEventListener('mouseover',() => {
-//         pixels[i].style.backgroundColor = 'red';
-//     });
-// }
+ResetBtn.addEventListener('click',ResetGrid);
 
