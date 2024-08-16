@@ -7,6 +7,7 @@ const RandomBtn = document.getElementById('RandomBtn');
 
 
 function PixelGrid(Num=16){
+    
     for(let i=1;i<(Num*Num);i++){
         const div = document.createElement('div');
         div.style.width=`calc(100%/${Num})`;
@@ -14,6 +15,7 @@ function PixelGrid(Num=16){
         div.classList.add('pixel');
         ArtBoard.appendChild(div);
     };
+
     for(let i = 0; i < pixels.length; i++){
         pixels[i].addEventListener('mouseover',() => {
             pixels[i].style.backgroundColor = 'red';
@@ -24,7 +26,7 @@ function PixelGrid(Num=16){
 function ResetGrid(){
     ArtBoard.innerHTML= "";
     PixelGrid();
-}
+};
 
 function RandomColor(){
     for(let i = 0; i < pixels.length; i++){
